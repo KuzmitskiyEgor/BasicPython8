@@ -47,7 +47,7 @@ def get_nearest_coffeeshops(coffeeshops, my_coords):
             'longitude': coffeeshop_longitude
         }
         coffee_info.append(coffee)
-    coffeeshop_info = sorted(coffee_info[:5], key=lambda x: x['distance'])
+    coffeeshop_info = sorted(coffee_info, key=lambda x: x['distance'])[:5]
     return coffeeshop_info
 
 
